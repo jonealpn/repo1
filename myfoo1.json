@@ -20,6 +20,7 @@
                 "t3.medium"
             ],
             "Default": "t3.small",
+#myfoo
             "ConstraintDescription": "must be a valid EC2 instance type."
         },
         "SSHLocation": {
