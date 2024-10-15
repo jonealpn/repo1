@@ -20,7 +20,6 @@
                 "t3.medium"
             ],
             "Default": "t3.small",
-#myfoo
             "ConstraintDescription": "must be a valid EC2 instance type."
         },
         "SSHLocation": {
@@ -67,8 +66,14 @@
                     "Ref": "LatestAmiId"
                 },
                 "Tags": [{"Key": "gitmodifiers", "Value": "joneal@paloaltonetworks.com"}]
+            },
+        "S3Bucket": {
+          "Type" : "AWS::S3::Bucket",
+          "Properties" : {
+            "BucketEncryption" : "BucketEncryption",
+            "BucketName" : "myonealbucket"
             }
-        },
+            },
         "InstanceSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
@@ -83,6 +88,7 @@
                     }
                 ]
             } 
+        }
         }
     }
 }
